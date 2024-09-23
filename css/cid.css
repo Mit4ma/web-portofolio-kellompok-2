@@ -1,0 +1,301 @@
+/* Import font from index.html (replace with the correct font used there) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Teks bagian utama */
+.name-web h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: -20px;
+}
+
+.name-web h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: -10px;
+}
+
+.name-web p.mn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-bottom: -4px;
+}
+
+.name-web p.bcd {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Tombol dengan jarak antar teks */
+.name-web button {
+    background-color: #ff6347;
+    border: none;
+    padding: 5px 10px; /* Memberikan jarak horizontal di dalam tombol */
+    margin-right: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    
+    border-radius: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px; /* Jarak antar huruf dalam teks tombol */
+}
+
+.name-web button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.name-web button:hover {
+    background-color: #e5533b;
+}
+
+/* Animasi Teks dan Gambar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.name-web {
+    animation: fadeIn 1.5s ease-in-out;
+    padding: 20px; /* Menambahkan padding untuk memberikan ruang pada teks */
+}
+
+.col-2 img {
+    animation: fadeIn 1.5s ease-in-out;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container-satu {
+        display: block;
+        padding: 10px;
+    }
+
+    .col-1, .col-2 {
+        width: 100%;
+        text-align: center; /* Mengatur agar konten berada di tengah */
+    }
+
+    .col-2 img {
+        max-width: 100%; /* Membuat gambar menyesuaikan ukuran layar */
+    }
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00008B;
+    padding: 3rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Desktop Menu */
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 1.5rem;
+}
+
+.navbar ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li.active a, 
+.navbar ul li a:hover {
+    color: #ff6347;
+}
+
+/* Footer */
+.footer {
+    background-color: #00008B;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    margin-top: 5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: -0.1rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: -0,1rem;
+}
+
+.footer .sosmed a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .sosmed a:hover {
+    color: #ff6347;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.name-web {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Flexbox untuk dua kolom */
+.container-satu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Agar kolom menumpuk di layar kecil */
+}
+
+.col-1 {
+    flex: 1;
+    padding-right: 20px; /* Memberi jarak pada teks */
+}
+
+.col-2 {
+    flex: 1;
+    text-align: right; /* Agar gambar berada di sebelah kanan */
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none; /* Tersembunyi di desktop */
+}
+
+.menu-toggle input {
+    display: none; /* Checkbox tersembunyi */
+}
+
+.menu-toggle label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+/* Responsive Hamburger Menu */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: #00008B;
+        position: absolute;
+        top: 140px;
+        left: 0;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: max-height 10s ease, opacity 10s ease;
+    }
+
+    .navbar ul.active {
+        display: flex;
+        opacity: 1;
+        height: 150px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle input:checked ~ ul {
+        height: 200px;
+        display: flex;
+    }
+   
+    .menu-toggle input:checked ~ ul.active {
+        height: 200px; /* Sama dengan active */
+        opacity: 1;
+    }
+}
+
+/* Gambar di dalam kolom */
+.col-2 img {
+    align-items: center;
+    min-width: 100%;
+    width: 100%;             /* Membuat gambar responsif */
+    max-width: 100%;        /* Batas maksimal lebar gambar */
+    height: auto;            /* Memastikan proporsi gambar tetap */
+    border-radius: 10px;     /* Memberi sudut bundar */
+    object-fit: cover;       /* Menjaga aspek rasio */
+    animation: fadeIn 2.5s ease-in-out;
+}

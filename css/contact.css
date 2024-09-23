@@ -1,0 +1,251 @@
+/* Import font from index.html (replace with the correct font used there) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Ensure the same font as index.html */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f3f3f3; /* Light background */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #00008B; /* Same color as the navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+.navbar ul li.active a, 
+.navbar ul li a:hover {
+    color: #ff6347;
+}
+
+.menu-toggel {
+    display: none;
+}
+
+.menu-toggel input {
+    display: none;
+}
+
+.menu-toggel span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    background-color: white;
+    transition: 0.4s;
+}
+
+/* Responsive Navbar for Mobile */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #00008B;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggel {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggel input:checked ~ ul {
+        display: flex;
+    }
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+}
+
+.kotak {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 9px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.kotak input[type="text"],
+.kotak textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kotak input.submit {
+    background-color: #00008B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.kotak input.submit:hover {
+    background-color: #003366;
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #00008B;
+    color: white;
+    text-align: center;
+    padding: 0.1rem ;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: -1rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.footer .sosmed {
+  margin-bottom: -15px;
+}
+
+.footer .social {
+    margin: 20px 0;
+}
+
+.footer .social a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .copyright {
+    margin-top: 10px;
+}
+
+.footer .sosmed a:hover {
+    color: #ff6347;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none; /* Tersembunyi di desktop */
+}
+
+.menu-toggle input {
+    display: none; /* Checkbox tersembunyi */
+}
+
+.menu-toggle label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+/* Responsive Hamburger Menu */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: #00008B;
+        position: absolute;
+        top: 140px;
+        left: 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle input:checked ~ ul {
+        display: flex;
+    }
+}

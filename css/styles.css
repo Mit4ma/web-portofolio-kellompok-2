@@ -1,0 +1,214 @@
+/* Import font from index.html (replace with the correct font used there) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #fafbfb;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the gallery section */
+.gallery {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s; /* Adds a slight delay before the animation starts */
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00008B;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.navbar ul li.active a{
+    color: #ff6347;
+    text-decoration: none;
+ 
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle input {
+    display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Gallery Section */
+.gallery{
+  padding: 20px;
+}
+
+.gallery .judul-1{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery .judul-2 {
+    background-color: #00008B;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 7rem;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.bagian-1, .bagian-2{
+    display: grid;
+    gap: 15px;
+}
+
+.bagian-1 {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.bagian-2 {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* Image styling */
+.gambar {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    border: 2px solid black;
+}
+
+.gambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gambar:hover img {
+    transform: scale(1.1);
+}
+
+/* Video styling */
+.video {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer styling */
+.footter {
+    background-color: #00008B;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    position: relative;
+    margin-top: 10rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footter h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: -10px;
+}
+
+.footter p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footter .sosmed a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Responsive Hamburger Menu */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 356px;
+        background-color: #00008B;
+        position: absolute;
+        top: 115px;
+        left: 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle input:checked ~ ul {
+        display: flex;
+    }
+}
